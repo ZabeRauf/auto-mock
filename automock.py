@@ -4,14 +4,16 @@ convertedText = ""
 
 def convertToMock(input, output):
     for i in input:
-        print(i)
+        # print(i)
+        if(i[1] == " "):
+            output += " "
         if(i[0] % 2 == 0):
             output += i[1].upper()
         else:
             output += i[1].lower()
-    print(output)
+    return output
         
 
-convertToMock(textEnum, convertedText)
+convertedText = convertToMock(textEnum, convertedText)
 
 print(convertedText)
